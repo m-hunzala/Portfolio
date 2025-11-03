@@ -6,7 +6,7 @@ import { Github, Linkedin, Twitter, Dribbble } from 'lucide-react';
 export default function Footer() {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/m-hunzala', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/hunzala-zafar', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'www.linkedin.com/in/m-hunzala', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://x.com/__hunzala', label: 'Twitter' },
   ];
 
@@ -22,7 +22,7 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             className="text-2xl font-bold text-white"
           >
-            M.Hunzala
+            Muhammad Hunzala
           </motion.div>
 
           {/* Social Links */}
@@ -58,7 +58,7 @@ export default function Footer() {
             className="text-center space-y-2"
           >
             <p className="text-gray-400">
-              © {new Date().getFullYear()} M.Hunzala. All rights reserved.
+              © {new Date().getFullYear()} Muhammad Hunzala. All rights reserved.
             </p>
             <p className="text-sm text-gray-500">
               Crafted with passion and powered by innovation

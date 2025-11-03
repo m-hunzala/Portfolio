@@ -14,11 +14,14 @@ export default function SkillsSection() {
     {
       title: 'Frontend',
       skills: [
-        { name: 'HTML/CSS', level: 95 },
         { name: 'JavaScript', level: 92 },
         { name: 'React', level: 90 },
         { name: 'Next.js', level: 88 },
         { name: 'TypeScript', level: 85 },
+        { name: 'Tailwind CSS', level: 87 },
+        { name: 'Vibe Coding', level: 90 },
+        { name: 'Prompt & Context Engineering', level: 90 },
+        
       ],
     },
     {
@@ -28,17 +31,20 @@ export default function SkillsSection() {
         { name: 'Fast APIs', level: 88 },
         { name: 'Ai Frameworks', level: 85 },
         { name: 'Ai Integration', level: 80 },
-        { name: 'Deployment', level: 88 },
+        { name: 'Deployment', level: 90 },
+        { name: 'OpenAI agent SDK & MCP', level: 80 },
+        { name: 'n8n', level: 85 },
       ],
     },
     {
       title: 'Design',
       skills: [
-        { name: 'Figma', level: 92 },
-        { name: 'Photoshop', level: 88 },
-        { name: 'Illustrator', level: 85 },
+        
         { name: 'UI/UX Design', level: 90 },
+        { name: 'Figma', level: 92 },
         {name: 'Canva', level:95},
+        { name: 'Photoshop & Illustrator', level: 88 },
+        {name: 'Branding', level:95},
       ],
     },
   ];

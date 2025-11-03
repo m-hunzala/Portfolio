@@ -5,11 +5,18 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'M. Hunzala - Web Developer & AI Engineer',
+  title: 'M.H',
   description: 'Professional portfolio of M. Hunzala - Full-stack developer, AI engineer, and graphic designer crafting intelligent digital experiences.',
   keywords: ['web developer', 'AI engineer', 'graphic designer', 'full-stack', 'React', 'Next.js', 'Python'],
   authors: [{ name: 'M. Hunzala' }],
   viewport: 'width=device-width, initial-scale=1',
+  icons: {
+    icon: [
+      { url: '/favicone.ico?v=3', sizes: 'any', type: 'image/x-icon' },
+    ],
+    shortcut: ['/favicone.ico?v=3'],
+  },
+
 };
 
 export default function RootLayout({

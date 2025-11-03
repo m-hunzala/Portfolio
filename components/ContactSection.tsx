@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Send, Mail, MapPin, Phone } from 'lucide-react';
 
 export default function ContactSection() {
@@ -22,19 +23,35 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
-    setIsSubmitting(false);
-    
-    // Show success message
-    alert('Message sent successfully!');
+
+    try {
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+
+      console.log('Email sent:', result.text);
+      alert('Message sent successfully!');
+
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Email error:', error);
+      alert('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
@@ -49,8 +66,8 @@ export default function ContactSection() {
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Houes#N-29 SEC 35-C - KORANGI',
-      href: '#',
+      value: 'Karachi, Pakistan',
+      href: 'https://www.google.com/maps/place/Karachi,+Pakistan/',
     },
     {
       icon: Phone,

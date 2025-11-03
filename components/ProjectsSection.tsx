@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink, Github } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ProjectsSection() {
   const [ref, inView] = useInView({
@@ -12,37 +13,38 @@ export default function ProjectsSection() {
 
   const projects = [
     {
-      title: 'AI-Powered Web Application',
+      title: 'E-Commerce Website',
       description: 'A full-stack application leveraging OpenAI and LangGraph for intelligent content generation with a modern React frontend.',
-      image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600',
-      tags: ['React', 'Python', 'FastAPI', 'OpenAI', 'Tailwind'],
+      image: 'https://img.freepik.com/free-photo/fashion-collection-design-shopping-graphic-words_53876-125567.jpg?t=st=1762200204~exp=1762203804~hmac=933013bc180d2238af31a40439f5f8057adff565502088e4ce6b4891781e281d&w=2000',
+      tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'PostCSS', 'ESLint', 'Node.js', 'npm', 'Git', 'Vercel'],
       github: 'https://github.com/m-hunzala',
-      demo: '#',
+      demo: 'https://vesto-9b3c-5lfnjt5fd-m-hunzalas-projects.vercel.app/',
     },
+    
     {
       title: 'E-Commerce Platform',
-      description: 'Modern e-commerce solution with real-time inventory, payment processing, and comprehensive admin dashboard.',
+      description: 'A modern, full-stack e-commerce web application built with Next.js, TypeScript, and Tailwind CSS, featuring Stripe payment integration, Supabase backend, real-time inventory management, and an intuitive admin dashboard.',
       image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=600&fit=crop&q=80',
-      tags: ['Next.js', 'TypeScript', 'Stripe', 'Database'],
+      tags: ['Next.js' , 'TypeScript' , 'React' , 'Tailwind CSS' , 'Stripe' , 'Supabase' , 'Vite'],
       github: 'https://github.com/m-hunzala',
       demo: 'https://digistore-murex.vercel.app/',
     },
     {
       title: 'Brand Identity System',
-      description: 'Complete brand identity design including logo, typography, color palette, and marketing materials for a tech startup.',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600',
-      tags: ['Figma', 'Illustrator', 'Photoshop', 'Brand Design'],
+      description: 'A modern web project built with Next.js, TypeScript, and Tailwind CSS, powered by Supabase backend and enhanced through Vibe Coding with advanced Prompt & Context Engineering.',
+      image: 'https://trendsetterzs.com/assets/product-17.webp',
+      tags: ['Next.js' , 'TypeScript' , 'Tailwind CSS' , 'Supabase' , 'Vibe Coding' , 'Prompt' , 'Context Engineering'],
       github: 'https://github.com/m-hunzala',
-      demo: '#',
+      demo: 'https://trendsetterzs.com/',
     },
-    {
-      title: 'Automation Workflow',
-      description: 'n8n-powered automation system integrating multiple APIs for streamlined business processes and data synchronization.',
-      image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600',
-      tags: ['n8n', 'Python', 'REST APIs', 'Webhooks'],
-      github: 'https://github.com/m-hunzala',
-      demo: '#',
-    },
+    // {
+    //   title: 'Automation Workflow',
+    //   description: 'n8n-powered automation system integrating multiple APIs for streamlined business processes and data synchronization.',
+    //   image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600',
+    //   tags: ['n8n', 'Python', 'REST APIs', 'Webhooks'],
+    //   github: 'https://github.com/m-hunzala',
+    //   demo: '#',
+    // },
   ];
 
   return (
@@ -74,16 +76,23 @@ export default function ProjectsSection() {
               whileHover={{ y: -10 }}
             >
               <div className="relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+                <div className="relative w-full h-64">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    priority={index === 0}
+                  />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 
                 <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <motion.a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     className="p-2 bg-black/50 backdrop-blur-sm rounded-full text-white hover:text-blue-400 transition-colors duration-200"
@@ -92,6 +101,8 @@ export default function ProjectsSection() {
                   </motion.a>
                   <motion.a
                     href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     className="p-2 bg-black/50 backdrop-blur-sm rounded-full text-white hover:text-blue-400 transition-colors duration-200"

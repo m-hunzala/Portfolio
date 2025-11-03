@@ -20,7 +20,7 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.2 }}
           className="text-5xl sm:text-6xl lg:text-8xl font-bold text-white mb-6 tracking-tight"
         >
-          M. Hunzala
+          Muhammad Hunzala
         </motion.h1>
         
         <motion.div
