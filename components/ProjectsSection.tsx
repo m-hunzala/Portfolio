@@ -34,7 +34,7 @@ export default function ProjectsSection() {
       description: 'A modern web project built with Next.js, TypeScript, and Tailwind CSS, powered by Supabase backend and enhanced through Vibe Coding with advanced Prompt & Context Engineering.',
       image: 'https://trendsetterzs.com/assets/product-17.webp',
       tags: ['Next.js' , 'TypeScript' , 'Tailwind CSS' , 'Supabase' , 'Vibe Coding' , 'Prompt' , 'Context Engineering'],
-      // github: 'https://github.com/m-hunzala',
+      github: 'https://github.com/m-hunzala',
       demo: 'https://trendsetterzs.com/',
     },
     // {
