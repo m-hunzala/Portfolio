@@ -6,7 +6,7 @@ import { Github, Linkedin, Twitter, Dribbble } from 'lucide-react';
 export default function Footer() {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/m-hunzala', label: 'GitHub' },
-    { icon: Linkedin, href: 'www.linkedin.com/in/m-hunzala', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/m-hunzala/', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://x.com/__hunzala', label: 'Twitter' },
   ];
 
