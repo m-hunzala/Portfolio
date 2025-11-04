@@ -17,7 +17,7 @@ export default function ProjectsSection() {
       description: 'A full-stack application leveraging OpenAI and LangGraph for intelligent content generation with a modern React frontend.',
       image: 'https://img.freepik.com/free-photo/fashion-collection-design-shopping-graphic-words_53876-125567.jpg?t=st=1762200204~exp=1762203804~hmac=933013bc180d2238af31a40439f5f8057adff565502088e4ce6b4891781e281d&w=2000',
       tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'PostCSS', 'ESLint', 'Node.js', 'npm', 'Git', 'Vercel'],
-      github: 'https://github.com/m-hunzala',
+      github: 'https://github.com/m-hunzala/VESTO',
       demo: 'https://vesto-9b3c-5lfnjt5fd-m-hunzalas-projects.vercel.app/',
     },
     
@@ -26,7 +26,7 @@ export default function ProjectsSection() {
       description: 'A modern, full-stack e-commerce web application built with Next.js, TypeScript, and Tailwind CSS, featuring Stripe payment integration, Supabase backend, real-time inventory management, and an intuitive admin dashboard.',
       image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=600&fit=crop&q=80',
       tags: ['Next.js' , 'TypeScript' , 'React' , 'Tailwind CSS' , 'Stripe' , 'Supabase' , 'Vite'],
-      github: 'https://github.com/m-hunzala',
+      github: 'https://github.com/m-hunzala/digistore',
       demo: 'https://digistore-murex.vercel.app/',
     },
     {
@@ -34,7 +34,7 @@ export default function ProjectsSection() {
       description: 'A modern web project built with Next.js, TypeScript, and Tailwind CSS, powered by Supabase backend and enhanced through Vibe Coding with advanced Prompt & Context Engineering.',
       image: 'https://trendsetterzs.com/assets/product-17.webp',
       tags: ['Next.js' , 'TypeScript' , 'Tailwind CSS' , 'Supabase' , 'Vibe Coding' , 'Prompt' , 'Context Engineering'],
-      github: 'https://github.com/m-hunzala',
+      // github: 'https://github.com/m-hunzala',
       demo: 'https://trendsetterzs.com/',
     },
     // {
