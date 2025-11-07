@@ -22,7 +22,7 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             className="text-2xl font-bold text-white"
           >
-            Muhammad Hunzala
+            Hunzala Zafar
           </motion.div>
 
           {/* Social Links */}
@@ -58,7 +58,7 @@ export default function Footer() {
             className="text-center space-y-2"
           >
             <p className="text-gray-400">
-              © {new Date().getFullYear()} Muhammad Hunzala. All rights reserved.
+              © {new Date().getFullYear()} Hunzala Zafar. All rights reserved.
             </p>
             <p className="text-sm text-gray-500">
               Crafted with passion and powered by innovation

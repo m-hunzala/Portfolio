@@ -102,7 +102,7 @@ export default function Navigation() {
               className="text-xl font-bold text-white cursor-pointer z-50"
               onClick={() => scrollToSection('home')}
             >
-                Muhammad Hunzala
+                Hunzala Zafar
             </motion.div>
             
             {/* Desktop Navigation */}
